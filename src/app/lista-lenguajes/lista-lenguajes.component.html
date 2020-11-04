@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="card "style="width: 21rem;">
+        <div class="card-header">
+            <h4>Formulario de lenguajes</h4>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                  <label for="nombre">Nombre Del Lenguaje</label>
+                  <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Ingrese Nombre" #nombre>
+                </div>
+                <div class="form-group">
+                  <label for="descripcion">Descripcion</label>
+                  <input type="text" class="form-control" id="descripcion" placeholder="Ingrese Descripcion" #descripcion>
+                </div>
+                <div class="form-group">
+                    <label for="image">Url</label>
+                    <input type="text" class="form-control" id="image" placeholder="Ingrese url de imagen" #image>
+                  </div>
+                <button type="submit" class="btn btn-success" (click)="guardar(nombre.value,descripcion.value,image.value)">Registrar</button>
+              </form>            
+        </div>
+        <div class="card-footer">
+            <p class="text-right">
+                GeraldReyesCastillo&copy;
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <app-lenguajes-programacion *ngFor="let lenguaje of lenguajes" [lenguaje]='lenguaje'></app-lenguajes-programacion>
+        </div>
+        
+    </div>
+</div>
